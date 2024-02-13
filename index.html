@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Happy Valentine's Day!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
+</head>
+<body>
+    <div>
+        <div class="heart-container"></div>
+    </div>
+    <center>
+    <h1 class="title">Happy Valentine's Day!</h1>
+</center>
+    <div class="shadow"></div>
+    <div class="envelope">
+        <img src="assets/env.svg" alt="env" class="env">
+        <img src="assets/env-head.svg" alt="env-head" class="env-head">
+        <img src="assets/letter.png" alt="Letter" class="letter" id="letter">
+    </div>
+
+    <div id="musicButton" onclick="toggleMusic()">
+        <div id="statusIndicator" class="status-indicator"></div>
+    </div>
+    <audio id="bgMusic" loop>
+        <source src="assets/music1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fae2de;
+    user-select: none; /* Prevent text selection */
+    pointer-events: none; /* Disable pointer events (including dragging) */
+}
+
+.title {
+    color: #c66c6a;
+    font-family: 'Mogra', system-ui;
+    font-size: 7vw; /* Adjust the value as needed */
+    position: absolute;
+    left: 11%;
+}
+
+/* Add a media query for smaller screens */
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 14vw; /* Adjust the value as needed for smaller screens */
+    }
+}
+
+
+.envelope {
+    position: relative;
+    width: 87%;
+    animation: fadeIn 1.5s ease-in-out, anim 5s infinite ease-in-out;
+    pointer-events: auto; /* Enable pointer events */
+}
+
+.env {
+    margin-left: 35%;
+    margin-top: 27%;
+    position: absolute;
+    width: 39%;
+    z-index: 3;
+}
+
+.env-head {
+    margin-left: 35%;
+    margin-top: 8.95%;
+    position: absolute;
+    width: 39%;
+    z-index: 1;
+}
+
+.letter {
+    margin-left: 36%;
+    margin-top: 25%;
+    position: absolute;
+    width: 37%;
+    transition: 1s ease-out;
+    z-index: 2;
+}
+
+.envelope:hover .letter {
+    transform: translateY(-150px);
+}
+
+
+
+@keyframes anim {
+    50% {
+        transform: translateY(50px);
+    }
+}
+
+.shadow {
+    top: 93.8%;
+    left: 28.5%;
+    width: 500px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 40%;
+    animation: shadowAnim 5s ease-in-out infinite, SfadeIn 1.5s ease-in-out;
+}
+
+@keyframes shadowAnim {
+    0% {
+        transform: scale(90%, 90%);
+    }
+    50% {
+        transform: scale(100%, 100%);
+    }
+    100% {
+        transform: scale(90%, 90%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes SfadeIn {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 40%;
+    }
+}
+
+
+#musicButton {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #c66c6a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: auto; /* Enable pointer events */
+}
+
+.status-indicator {
+    width: 30px;
+    height: 30px;
+    background-image: url("assets/play.png"); /* Initially set to play icon */
+    background-size: cover;
+}
+
+
+
+
+
+/* Add animation for hearts */
+@keyframes heartbeat {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        transform: translateY(-10vh) scale(1.1);
+        opacity: 1;
+    }
+    30% {
+        transform: translateY(-20vh) scale(0.9);
+    }
+    100% {
+        transform: translateY(-100vh) scale(0);
+        opacity: 0;
+    }
+}
+
+.heart-image {
+    position: absolute;
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    bottom: 0; /* Start from the bottom */
+    animation: ascend 5s linear forwards; /* Keyframe animation for ascending */
+    z-index: 0;
+}
+
+/* Keyframe animation for ascending */
+@keyframes ascend {
+    0% {
+        opacity: 0;
+        bottom: 0; /* Initial position */
+    }
+    10%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        bottom: 100%; /* Top of the page */
+    }
+}
+
+
+#heart-image{
+    z-index: 0;
+}
